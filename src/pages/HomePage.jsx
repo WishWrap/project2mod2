@@ -1,4 +1,17 @@
 import { useState } from "react";
+import { Button, Stack, Input } from "@chakra-ui/react";
+import {
+  Editable,
+  EditableInput,
+  EditableTextarea,
+  EditablePreview,
+} from "@chakra-ui/react";
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+} from "@chakra-ui/react";
 
 function HomePage() {
   const [userData, setUserData] = useState({
@@ -7,6 +20,8 @@ function HomePage() {
     bottom: "",
     shoes: "",
   });
+
+  //send the user data
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setUserData({
@@ -119,8 +134,45 @@ function HomePage() {
           <option value="22/53">22/53</option>
           <option value="23/54">23/54</option>
         </select>
-        <button type="submit"> Envoyer</button>
       </div>
+      <div>
+        <Stack direction="row" spacing={4}>
+          <Button isLoading colorScheme="teal" variant="solid">
+            Email
+          </Button>
+          <Button
+            isLoading
+            loadingText="Submitting"
+            colorScheme="teal"
+            variant="outline"
+          >
+            Submit
+          </Button>
+        </Stack>
+      </div>
+      <p></p>
+      <h2>What I want</h2>
+      <FormControl isRequired>
+        <FormLabel>Name of the gift</FormLabel>
+        <Input placeholder="Name of the gift" />
+      </FormControl>
+      <FormControl isRequired>
+        <FormLabel>Price</FormLabel>
+        <Input placeholder="Price of the gift" />
+      </FormControl>
+      <FormControl isRequired>
+        <FormLabel>Where found it </FormLabel>
+        <Input placeholder="URL of the gift" />
+      </FormControl>
+
+      <Button
+        isLoading
+        loadingText="Submitting"
+        colorScheme="teal"
+        variant="outline"
+      >
+        Submit
+      </Button>
     </form>
   );
 }

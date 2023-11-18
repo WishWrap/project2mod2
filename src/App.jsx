@@ -1,41 +1,41 @@
-import { Route, Routes } from "react-router-dom"
-import './App.css'
-import HomePage from "./pages/HomePage"
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import HomePage from "./pages/HomePage";
 import NavBar from "./component/NavBar";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { ChakraProvider } from "@chakra-ui/react";
+
 function App() {
-  const [allProducts, setAllProducts] = useState(null)
- const fetchProducts = async () => {
-  try {
-    const response = await axios.get('https://fakestoreapi.com/products')
+  const [allProducts, setAllProducts] = useState(null);
+  const fetchProducts = async () => {
+    try {
+      const response = await axios.get("https://fakestoreapi.com/products");
 
-    setAllProducts(response.data)
-    console.log(allProducts)
-  } catch (error) {
-    console.log(error)
-  }
- } 
+      setAllProducts(response.data);
+      console.log(allProducts);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-
- useEffect(() => {
-  fetchProducts()
- }, [])
+  useEffect(() => {
+    fetchProducts();
+  }, []);
   return (
     <div className="App">
       <h1>WishWrap</h1>
 
+      <NavBar />
 
-        <NavBar/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
 
-        <Routes>
-          <Route path="/" element={<HomePage/>}/>
-        </Routes>
+     
 
     </div>
-  ); 
-
-
+  );
 }
 
-export default App
+export default App;
