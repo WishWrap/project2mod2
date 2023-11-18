@@ -37,6 +37,7 @@ function HomePage() {
   return (
     <form onSubmit={handelSubmit}>
       <div>
+        <h2>Measure</h2>
         <label htmlFor="hat"> Hat </label>
         <select
           name="hat"
