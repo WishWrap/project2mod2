@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom'
+import ProductList from "../component/ProductList";
 
 function whatIWant() {
     const navigate = useNavigate(); 
@@ -39,6 +40,9 @@ function whatIWant() {
 
 
 return (
+  <div>
+
+
     <form onSubmit={handelSubmit}>
     <h2>What I want</h2>
       
@@ -69,6 +73,8 @@ return (
 
  <input type="submit"/>
 </form>
+<ProductList/>
+</div>
 )
 }
 
