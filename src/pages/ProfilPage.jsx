@@ -1,7 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom'
 
 function profilPage() {
+  const navigate = useNavigate()
   const [userData, setUserData] = useState({
     hat: "",
     top: "",
@@ -28,8 +30,9 @@ function profilPage() {
     console.log(userData);
 
     axios
-      .post("http://localhost:5005/gift", userData)
+      .post("http://localhost:5005/measure", userData)
       .then((response) => {
+        navigate ("/whatIWant/")
         console.log(response.data);
       })
       .catch((error) => {
@@ -109,6 +112,7 @@ function profilPage() {
           onChange={handleInputChange}
         >
           <option value="" hidden defaultValue="" disabled></option>
+          
           <option value="6/37">6 / 36</option>
           <option value="7/38">7/38</option>
           <option value="8/39">8/39</option>
