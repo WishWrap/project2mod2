@@ -1,14 +1,16 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 function profilPage() {
   const navigate = useNavigate()
+  const {idUser} = useParams()
   const [userData, setUserData] = useState({
     hat: "",
     top: "",
     bottom: "",
     shoes: "",
+    user_id: idUser
   });
 
   const hatSize = [];
@@ -32,7 +34,7 @@ function profilPage() {
     axios
       .post("http://localhost:5005/measure", userData)
       .then((response) => {
-        navigate ("/whatIWant/")
+        navigate (`/whatIWant/${idUser}`)
         console.log(response.data);
       })
       .catch((error) => {
