@@ -14,9 +14,22 @@ function FinalPage() {
     price: "",
     urlOfGift: "",
   });
+  const [productGifts, setProductGifts]= useState ([]); 
+
+  function getProductsGifts () {
+    axios
+    .get(`http://localhost:5005/items`)
+    .then ((response)=>{
+      setProductGifts(response.data); 
+    })
+    .catch ((error)=>{
+      console.log(error); 
+    })
+  }
 
   useEffect(() => {
     alldata();
+    getProductsGifts(); 
   }, []);
 
   const alldata = () => {
@@ -149,8 +162,15 @@ function FinalPage() {
             }
           />
           <button onClick={updateGift}>Update</button>
+          
         </div>
+
       )}
+      <div>
+            <h2>hello</h2>
+
+        
+      </div>
     </div>
   );
 }
