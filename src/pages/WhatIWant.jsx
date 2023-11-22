@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import ProductList from "../component/ProductList"
 
 function whatIWant() {
   const { idUser } = useParams();
@@ -51,6 +52,7 @@ function whatIWant() {
   };
 
   return (
+    <div>
     <form onSubmit={handelSubmit}>
       <h2>What I want</h2>
       {[...userData].map((user, index) => (
@@ -86,6 +88,8 @@ function whatIWant() {
 
       <input type="submit" />
     </form>
+    <ProductList/>
+    </div>
   );
 }
 
