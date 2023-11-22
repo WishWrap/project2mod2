@@ -13,7 +13,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>WishWrap</h1>
 
       <NavBar />
 
