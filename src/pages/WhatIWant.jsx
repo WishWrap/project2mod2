@@ -51,43 +51,17 @@ function whatIWant() {
       });
   };
 
+  function navigateToFinalPage(event){
+    navigate(`/finalPage/${idUser}`);
+  }
+
   return (
+
+
+
+      
     <div>
-    <form onSubmit={handelSubmit}>
-      <h2>What I want</h2>
-      {[...userData].map((user, index) => (
-        <div key={index}>
-          <label>Name of the gift</label>
-          <input
-            type="text"
-            name="nameOfTheGift"
-            value={user.nameOfTheGift}
-            onChange={(e) => handleInputChange(e, index)}
-            placeholder="Name of the gift"
-          />
-
-          <label>Price</label>
-          <input
-            type="text"
-            name="price"
-            value={user.price}
-            onChange={(e) => handleInputChange(e, index)}
-            placeholder="Price of the gift"
-          />
-
-          <label>Where found it </label>
-          <input
-            type="text"
-            name="urlOfGift"
-            value={user.urlOfGift}
-            onChange={(e) => handleInputChange(e, index)}
-            placeholder="URL of the gift"
-          />
-        </div>
-      ))}
-
-      <input type="submit" />
-    </form>
+    <button onClick={navigateToFinalPage}>Go to final page</button>
     <ProductList/>
     </div>
   );

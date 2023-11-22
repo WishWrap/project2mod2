@@ -168,7 +168,11 @@ function FinalPage() {
       )}
       <div>
             <h2>hello</h2>
-
+            {productGifts.map((product)=>{
+              return(
+                <p>{product.title}</p>
+              )
+            })}
         
       </div>
     </div>
