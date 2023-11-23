@@ -102,12 +102,27 @@
   margin-bottom: 5px; 
 }
 
-.product-info input {
+.product-info-input {
   margin-bottom: 10px;
+  border-color:blue;
+  border: 1px solid black;
 }
 
 .product-info button {
   margin-top: 10px; 
+  background-color: #de4c4f;
+  display: flex;
+  border-radius: 3px;
+  border-color: #de4c4f;
+  border: 1px solid transparent;
+  justify-content: center;
+  color: white;
+  border: none;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 
@@ -146,5 +161,10 @@
   vertical-align: baseline;
 }
 
-
-
+.productlist-button-container {
+  width: 100% ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
