@@ -69,31 +69,31 @@
 
 
 
-
+/*tbd piece*/
 
 
 .new-product-title {
   margin-bottom: 10px;
-  font-size: 18px; /* Set a smaller font size for the new product title */
+  font-size: 18px; 
   font-weight: bold;
-  margin-bottom: 10px; /* Add some space below the title */
+  margin-bottom: 10px; 
 }
 
 .product-info {
   display: flex;
-  flex-direction: column; /* Stack the child elements vertically */
+  flex-direction: column; 
 }
 
 .product-info label {
-  margin-bottom: 5px; /* Add some space below each label */
+  margin-bottom: 5px; 
 }
 
 .product-info input {
-  margin-bottom: 10px; /* Add some space below each input */
+  margin-bottom: 10px;
 }
 
 .product-info button {
-  margin-top: 10px; /* Add some space above the button */
+  margin-top: 10px; 
 }
 
 
@@ -128,10 +128,9 @@
 }
 
 .delete-icon {
-  font-size: 14px; /* Adjust the font size of the delete icon as needed */
+  font-size: 14px; 
   vertical-align: baseline;
 }
 
-/* ... (existing code) */
 
 
