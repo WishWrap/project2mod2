@@ -4,7 +4,6 @@ import HomePage from "./pages/HomePage";
 import WhatIWant from "./pages/WhatIWant";
 import ProfilPage from "./pages/ProfilPage";
 import FinalPage from "./pages/FinalPage.jsx"; 
-import NavBar from "./component/NavBar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -14,7 +13,7 @@ function App() {
   return (
     <div className="App">
 
-      <NavBar />
+ 
 
       <Routes>
         <Route path="/" element={<HomePage />} />
