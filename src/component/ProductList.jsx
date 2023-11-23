@@ -70,42 +70,44 @@ function ProductList() {
       <div className="App">
         <div className="product-container">
           <div className="product-box">
-            <h1>{editProduct ? "Edit Product" : "New Product"}</h1>
-            <label>Title:</label>
-            <input
-              type="text"
-              value={editProduct ? editProduct.title : newProduct.title}
-              onChange={(e) =>
-                editProduct
-                  ? setEditProduct({ ...editProduct, title: e.target.value })
-                  : setNewProduct({ ...newProduct, title: e.target.value })
-              }
-            />
-            <label>Price:</label>
-            <input
-              type="number"
-              value={editProduct ? editProduct.price : newProduct.price}
-              onChange={(e) =>
-                editProduct
-                  ? setEditProduct({ ...editProduct, price: e.target.value })
-                  : setNewProduct({ ...newProduct, price: e.target.value })
-              }
-            />
-            <label>Image URL:</label>
-            <input
-              type="text"
-              value={editProduct ? editProduct.images[0] : newProduct.images[0]}
-              onChange={(e) =>
-                editProduct
-                  ? setEditProduct({ ...editProduct, images: [e.target.value] })
-                  : setNewProduct({ ...newProduct, images: [e.target.value] })
-              }
-            />
-            {editProduct ? (
-              <button onClick={handleUpdate}>Update Product</button>
-            ) : (
-              <button onClick={handleCreate}>Create Product</button>
-            )}
+            <h1 className="new-product-title">{editProduct ? "Edit Product" : "New Product"}</h1>
+            <div className="product-info">
+              <label>Title:</label>
+              <input
+                type="text"
+                value={editProduct ? editProduct.title : newProduct.title}
+                onChange={(e) =>
+                  editProduct
+                    ? setEditProduct({ ...editProduct, title: e.target.value })
+                    : setNewProduct({ ...newProduct, title: e.target.value })
+                }
+              />
+              <label>Price:</label>
+              <input
+                type="number"
+                value={editProduct ? editProduct.price : newProduct.price}
+                onChange={(e) =>
+                  editProduct
+                    ? setEditProduct({ ...editProduct, price: e.target.value })
+                    : setNewProduct({ ...newProduct, price: e.target.value })
+                }
+              />
+              <label>Image URL:</label>
+              <input
+                type="text"
+                value={editProduct ? editProduct.images[0] : newProduct.images[0]}
+                onChange={(e) =>
+                  editProduct
+                    ? setEditProduct({ ...editProduct, images: [e.target.value] })
+                    : setNewProduct({ ...newProduct, images: [e.target.value] })
+                }
+              />
+              {editProduct ? (
+                <button onClick={handleUpdate}>Update Product</button>
+              ) : (
+                <button onClick={handleCreate}>Create Product</button>
+              )}
+            </div>
           </div>
           {allProducts &&
             allProducts.map((product) => (
@@ -117,12 +119,16 @@ function ProductList() {
                   alt="Product"
                 />
                 <h2 className="product-price">{product.price} € </h2>
-                <button onClick={() => handleDelete(product.id)}>
-                  Delete
-                </button>
-                <button onClick={() => handleEdit(product)}>
-                  Edit
-                </button>
+
+                <button className="edit-button" onClick={() => handleEdit(product)}>
+        Edit
+      </button>
+                <button className="delete-button" onClick={() => handleDelete(product.id)}>
+
+        <span role="img" aria-label="Delete" className="delete-icon">
+          🗑️
+        </span>
+      </button>
               </div>
             ))}
         </div>
@@ -132,5 +138,3 @@ function ProductList() {
 }
 
 export default ProductList;
-
-

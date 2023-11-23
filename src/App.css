@@ -37,21 +37,27 @@
 .product-box {
   box-sizing: border-box;
   width: 300px; 
+  height: 540px; 
   border: 1px solid #ececec; 
   margin: 14px; 
   padding: 16px; 
+  overflow: hidden; 
 }
 
 
 .product-title {
-  font-size: 18px;
+  text-transform: uppercase;
+  font-size: 16px;
   margin-bottom: 8px;
+  font-weight: 500;
 }
 
 .product-image {
   max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  max-height: 100%; 
+  object-fit: cover; 
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
@@ -59,3 +65,73 @@
   font-size: 16px;
   color: green; 
 }
+
+
+
+
+
+
+
+.new-product-title {
+  margin-bottom: 10px;
+  font-size: 18px; /* Set a smaller font size for the new product title */
+  font-weight: bold;
+  margin-bottom: 10px; /* Add some space below the title */
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column; /* Stack the child elements vertically */
+}
+
+.product-info label {
+  margin-bottom: 5px; /* Add some space below each label */
+}
+
+.product-info input {
+  margin-bottom: 10px; /* Add some space below each input */
+}
+
+.product-info button {
+  margin-top: 10px; /* Add some space above the button */
+}
+
+
+
+
+/*.edit-button {
+  background-color: #4caf50; 
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}  */
+
+
+.delete-button {
+  background-color: none;
+  color: white;
+  border: none;
+  padding: 8px 20px 8px 195px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+ 
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  font-size: 14px; /* Adjust the font size of the delete icon as needed */
+  vertical-align: baseline;
+}
+
+/* ... (existing code) */
+
+
