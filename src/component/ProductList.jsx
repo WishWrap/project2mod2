@@ -13,7 +13,7 @@ function ProductList() {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:5005/items");
+      const response = await axios.get("https://supergiftme.adaptable.app/items");
       setAllProducts(response.data);
     } catch (error) {
       console.error("Error fetching products:", error.message);
@@ -22,7 +22,7 @@ function ProductList() {
 
   const handleDelete = async (productId) => {
     try {
-      await axios.delete(`http://localhost:5005/items/${productId}`);
+      await axios.delete(`https://supergiftme.adaptable.app/items/${productId}`);
       setAllProducts((prevProducts) =>
         prevProducts.filter((product) => product.id !== productId)
       );
@@ -33,7 +33,7 @@ function ProductList() {
 
   const handleCreate = async () => {
     try {
-      const response = await axios.post("http://localhost:5005/items", newProduct);
+      const response = await axios.post("https://supergiftme.adaptable.app/items", newProduct);
       setAllProducts((prevProducts) => [response.data, ...prevProducts]);
       setNewProduct({
         title: "",
@@ -51,7 +51,7 @@ function ProductList() {
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:5005/items/${editProduct.id}`, editProduct);
+      const response = await axios.put(`https://supergiftme.adaptable.app/items/${editProduct.id}`, editProduct);
       setAllProducts((prevProducts) =>
         prevProducts.map((product) => (product.id === editProduct.id ? response.data : product))
       );

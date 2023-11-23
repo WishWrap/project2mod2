@@ -41,7 +41,7 @@ function whatIWant() {
     }
     console.log(keys);
     axios
-      .post("http://localhost:5005/gift", userData[i])
+      .post("https://supergiftme.adaptable.app/gift", userData[i])
       .then((response) => {
         navigate(`/finalPage/${idUser}`);
         console.log(response.data);

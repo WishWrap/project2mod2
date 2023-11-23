@@ -19,7 +19,7 @@ function HomePage() {
   };
 const post =()=>{
   axios
-      .post("http://localhost:5005/user", userData)
+      .post("https://supergiftme.adaptable.app/user", userData)
       .then((response) => {
         navigate("/profile/"+response.data.id)
         console.log(response.data);
@@ -34,7 +34,7 @@ const post =()=>{
     console.log(userData);
 
     axios
-    .get (`http://localhost:5005/user?email=${userData.email}&nameAndSurname=${userData.nameAndSurname}`)
+    .get (`https://supergiftme.adaptable.app/user?email=${userData.email}&nameAndSurname=${userData.nameAndSurname}`)
     .then ((response)=>{
       if(response.data.length === 1){
       navigate("/whatIWant")

@@ -18,7 +18,7 @@ function FinalPage() {
 
   function getProductsGifts () {
     axios
-    .get(`http://localhost:5005/items`)
+    .get(`https://supergiftme.adaptable.app/items`)
     .then ((response)=>{
       setProductGifts(response.data); 
     })
@@ -34,7 +34,7 @@ function FinalPage() {
 
   const alldata = () => {
     axios
-      .get(`http://localhost:5005/user?id=${idUser}`)
+      .get(`https://supergiftme.adaptable.app/user?id=${idUser}`)
       .then((response) => {
         setUserData(response.data);
       })
@@ -43,7 +43,7 @@ function FinalPage() {
       });
 
     axios
-      .get(`http://localhost:5005/measure?user_id=${idUser}`)
+      .get(`https://supergiftme.adaptable.app/measure?user_id=${idUser}`)
       .then((response) => {
         setUserMeasureData(response.data);
       })
@@ -52,7 +52,7 @@ function FinalPage() {
       });
 
     axios
-      .get(`http://localhost:5005/gift?user_id=${idUser}`)
+      .get(`https://supergiftme.adaptable.app/gift?user_id=${idUser}`)
       .then((response) => {
         setWhatIWantData(response.data);
       })
@@ -63,7 +63,7 @@ function FinalPage() {
 
   const deleteGift = (id) => {
     axios
-      .delete(`http://localhost:5005/gift/${id}`)
+      .delete(`https://supergiftme.adaptable.app/gift/${id}`)
       .then((response) => {
         const updatedData = userWhatIWantData.filter((gift) => gift.id !== id);
         setWhatIWantData(updatedData);
@@ -75,7 +75,7 @@ function FinalPage() {
 
   const updateGift = () => {
     axios
-      .put(`http://localhost:5005/gift/${updatedGift.id}`, updatedGift)
+      .put(`https://supergiftme.adaptable.app/gift/${updatedGift.id}`, updatedGift)
       .then((response) => {
         const updatedData = userWhatIWantData.map((gift) =>
           gift.id === updatedGift.id ? response.data : gift

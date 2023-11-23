@@ -32,7 +32,7 @@ function profilPage() {
     console.log(userData);
 
     axios
-      .post("http://localhost:5005/measure", userData)
+      .post("https://supergiftme.adaptable.app/measure", userData)
       .then((response) => {
         navigate (`/whatIWant/${idUser}`)
         console.log(response.data);
