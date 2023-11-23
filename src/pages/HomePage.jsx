@@ -36,12 +36,9 @@ const post =()=>{
     axios
     .get (`https://supergiftme.adaptable.app/user?email=${userData.email}&nameAndSurname=${userData.nameAndSurname}`)
     .then ((response)=>{
-      if(response.data.length === 1){
-      navigate("/whatIWant")
-      }
-      else {
+  
         post()
-      }
+      
     })
     
 
