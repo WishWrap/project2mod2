@@ -49,6 +49,7 @@ const post =()=>{
   };
   return (
     <div className="homePage">
+      <img src="../wishwrap/src/component/Logo-W.jpeg" />
       <h1>Register</h1>
       <h2>It's Free !</h2>
       <div>Register to start your profil</div>

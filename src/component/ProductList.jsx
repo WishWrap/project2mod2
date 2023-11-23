@@ -76,7 +76,7 @@ function ProductList() {
           <div className="product-box">
             <h1 className="new-product-title">{editProduct ? "Edit Product" : "New Product"}</h1>
             <div className="product-info">
-              <label>Title:</label>
+              <label className="product-info-input-tittle">Title:</label>
               <input className="product-info-input"
                 type="text"
                 value={editProduct ? editProduct.title : newProduct.title}
@@ -86,8 +86,8 @@ function ProductList() {
                     : setNewProduct({ ...newProduct, title: e.target.value })
                 }
               />
-              <label>Price:</label>
-              <input
+              <label className="product-info-input-tittle">Price:</label>
+              <input className="product-info-input"
                 type="number"
                 value={editProduct ? editProduct.price : newProduct.price}
                 onChange={(e) =>
@@ -96,8 +96,8 @@ function ProductList() {
                     : setNewProduct({ ...newProduct, price: e.target.value })
                 }
               />
-              <label>Image URL:</label>
-              <input
+              <label className="product-info-input-tittle">Image URL:</label>
+              <input className="product-info-input"
                 type="text"
                 value={editProduct ? editProduct.images[0] : newProduct.images[0]}
                 onChange={(e) =>

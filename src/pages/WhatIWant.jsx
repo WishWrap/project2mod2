@@ -40,6 +40,7 @@ function whatIWant() {
       }
     }
     console.log(keys);
+    
     axios
       .post("https://supergiftme.adaptable.app/gift", userData[i])
       .then((response) => {

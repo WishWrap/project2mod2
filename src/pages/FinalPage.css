@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 .FinalPage {
     display : flex; 
     flex-direction: row;
@@ -6,3 +10,17 @@
     font-size: 16px;
 }
 
+.center-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-weight: 1000;
+    font-family: "open sans";
+}
+
+.subtitle {
+    font-weight: 500;
+
+}

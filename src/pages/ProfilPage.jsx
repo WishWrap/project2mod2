@@ -44,7 +44,7 @@ function profilPage() {
       });
   };
   return (
-    <form onSubmit={handelSubmit}>
+    <form onSubmit={handelSubmit} className="center">
       <div className="Formulare">
         <h2>Measure</h2>
         <label htmlFor="hat"> Hat </label>
@@ -107,7 +107,7 @@ function profilPage() {
           <option value="4XL">4XL</option>
         </select>
       </div>
-      <div >
+      <div className="Formulare">
         <label htmlFor="shoes"> Shoes</label>
         <select
           name="shoes"
@@ -136,7 +136,7 @@ function profilPage() {
           <option value="23/54">23/54</option>
         </select>
       </div>
-      <div>
+      <div className="Formulare" >
         <input type="submit" />
       </div>
     </form>
