@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import whatIWant from "./WhatIWant";
+import "./FinalPage.css"
+import "@fontsource/open-sans";
 
 function FinalPage() {
   const { idUser } = useParams();
@@ -103,78 +105,48 @@ function FinalPage() {
   };
 
   return (
-    <div>
-      <h2>Users</h2>
+ 
+    <div className="FinalPage">
+      
+      
       {userData.map((data, index) => (
         <div key={index}>
-          mail : {data.email}
-          username : {data.nameAndSurname}
+          <h2>Users</h2>
+          Email : {data.email}
+          <br></br>
+          Username : {data.nameAndSurname}
         </div>
       ))}
+      <div>
       <h2>Measure</h2>
       {userMeasureData.map((data, index) => (
         <div key={index}>
+          <h4>Size of hat</h4>
           {data.hat}
+          <br></br>
+          <h4>Size of Top</h4>
           {data.top}
+          <br></br>
+          <h4>Size of Bottom</h4>
           {data.bottom}
+          <br></br>
+          <h4>Size of Shoes</h4>
           {data.shoes}
         </div>
+     
       ))}
-      <h2>What I Want</h2>
-      {userWhatIWantData.map((data, index) => (
-        <div key={index}>
-          {data.nameOfTheGift}
-          {data.price}
-          {data.urlOfGift}
-          <button onClick={() => deleteGift(data.id)}>delete</button>
-          <button onClick={() => handleUpdateClick(data)}>update</button>
-        </div>
-      ))}
-      
-      {updatedGift.id && (
-        <div>
-          <h3>Update Gift</h3>
-          <label>Name of the Gift:</label>
-          <input
-            type="text"
-            value={updatedGift.nameOfTheGift}
-            onChange={(e) =>
-              setUpdatedGift({
-                ...updatedGift,
-                nameOfTheGift: e.target.value,
-              })
-            }
-          />
-          <label>Price:</label>
-          <input
-            type="text"
-            value={updatedGift.price}
-            onChange={(e) =>
-              setUpdatedGift({ ...updatedGift, price: e.target.value })
-            }
-          />
-          <label>URL of the Gift:</label>
-          <input
-            type="text"
-            value={updatedGift.urlOfGift}
-            onChange={(e) =>
-              setUpdatedGift({ ...updatedGift, urlOfGift: e.target.value })
-            }
-          />
-          <button onClick={updateGift}>Update</button>
-          
-        </div>
-
-      )}
+      </div>
       <div>
-            <h2>hello</h2>
+            <h2> Your Gift</h2>
             {productGifts.map((product)=>{
               return(
                 <p>{product.title}</p>
               )
             })}
-        
+       
       </div>
+    
+    
     </div>
   );
 }

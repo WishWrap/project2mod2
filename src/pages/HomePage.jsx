@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from 'react-router-dom'
 import "./HomePage.css"
+import "@fontsource/open-sans"; 
+
 
 function HomePage() {
   const navigate = useNavigate()
@@ -52,18 +54,28 @@ const post =()=>{
       <div>Register to start your profil</div>
       <form onSubmit={handelSubmit}>
     <div>
-      <h2>Profil</h2>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <input
         onChange={handleInputChange}
         type="text"
         name="nameAndSurname"
         placeholder="Name and Surname"
+        className="input"
       />
+      <br>
+      </br>
       <input onChange={handleInputChange} 
       type="email" 
       name="email"
-      placeholder="email" />
-      <input type="submit"/>
+      placeholder="Email" 
+      className="input"/>
+      <br></br>
+      <br></br>
+      <br></br>
+      <input type="submit" className="input"/>
     </div>
   </form>
   </div>

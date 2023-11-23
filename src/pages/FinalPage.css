@@ -1,0 +1,8 @@
+.FinalPage {
+    display : flex; 
+    flex-direction: row;
+    justify-content: center;
+    font-family: "open sans";
+    font-size: 16px;
+}
+

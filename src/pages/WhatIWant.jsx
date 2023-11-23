@@ -61,8 +61,10 @@ function whatIWant() {
 
       
     <div>
-    <button onClick={navigateToFinalPage}>Go to final page</button>
     <ProductList/>
+    <div className="productlist-button-container">
+    <button className="productlist-button" onClick={navigateToFinalPage}>My Gift Shortlist</button>
+    </div>
     </div>
   );
 }

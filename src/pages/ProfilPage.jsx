@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from 'react-router-dom'
+import "./ProfilPage.css"
+import "@fontsource/open-sans";
 
 function profilPage() {
   const navigate = useNavigate()
@@ -43,7 +45,7 @@ function profilPage() {
   };
   return (
     <form onSubmit={handelSubmit}>
-      <div>
+      <div className="Formulare">
         <h2>Measure</h2>
         <label htmlFor="hat"> Hat </label>
         <select
@@ -53,7 +55,7 @@ function profilPage() {
           onChange={handleInputChange}
           required
         >
-          <option value="" hidden defaultValue="" disabled></option>
+          <option value="" hidden defaultValue="" disabled ></option>
           {hatSize.map((size) => (
             <option key={size} value={size}>
               {size}
@@ -61,8 +63,8 @@ function profilPage() {
           ))}
         </select>
       </div>
-      <div>
-        <label htmlFor="top"> Top </label>
+      <div className="Formulare">
+        <label htmlFor="top" > Top </label>
         <select
           name="top"
           id="top"
@@ -85,7 +87,7 @@ function profilPage() {
           <option value="8XL">8XL</option>
         </select>
       </div>
-      <div>
+      <div className="Formulare">
         <label htmlFor="bottom"> Bottom</label>
         <select
           name="bottom"
@@ -105,7 +107,7 @@ function profilPage() {
           <option value="4XL">4XL</option>
         </select>
       </div>
-      <div>
+      <div >
         <label htmlFor="shoes"> Shoes</label>
         <select
           name="shoes"
