@@ -46,6 +46,7 @@ function profilPage() {
   return (
     <form onSubmit={handelSubmit} className="center">
       <div className="Formulare">
+      <img className="logo" src="/Logo-white.jpeg" /> 
         <h2>Measure</h2>
         <label htmlFor="hat"> Hat </label>
         <select
@@ -136,8 +137,8 @@ function profilPage() {
           <option value="23/54">23/54</option>
         </select>
       </div>
-      <div className="Formulare" >
-        <input type="submit" />
+      <div className="inputProfilPageDiv" >
+        <input className="inputProfilPage" type="submit"/>
       </div>
     </form>
   );

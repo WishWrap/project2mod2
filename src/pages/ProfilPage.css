@@ -1,11 +1,9 @@
 .Formulare {
-  margin: 4px;
   padding: 8px;
   font-size: 16px;
   font-family: "open sans";
   text-align: center;
-  margin: 10px;
-  justify-content: left;
+
 }
 
 .center {
@@ -14,4 +12,27 @@
 
 .logo {
   width: 500px;
+}
+
+.inputProfilPage {
+  display: flex;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  justify-content: center;
+  background-color: #de4c4f; 
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer; 
+  margin-top: 15px;
+}
+
+.inputProfilPageDiv{
+  justify-content: center;
+  text-align: center;
+
 }
