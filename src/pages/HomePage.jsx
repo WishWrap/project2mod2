@@ -49,15 +49,12 @@ const post =()=>{
   };
   return (
     <div className="homePage">
-      <img src="../wishwrap/src/component/Logo-W.jpeg" />
+      <img className="logo" src="/Logo-white.jpeg" /> 
       <h1>Register</h1>
       <h2>It's Free !</h2>
       <div>Register to start your profil</div>
       <form onSubmit={handelSubmit}>
     <div>
-      <br></br>
-      <br></br>
-      <br></br>
       <br></br>
       <input
         onChange={handleInputChange}
@@ -68,15 +65,15 @@ const post =()=>{
       />
       <br>
       </br>
-      <input onChange={handleInputChange} 
+      <div >
+      <input className="input" onChange={handleInputChange} 
       type="email" 
       name="email"
       placeholder="Email" 
-      className="input"/>
+      />
       <br></br>
-      <br></br>
-      <br></br>
-      <input type="submit" className="input"/>
+      </div>
+      <input type="submit" className="inputButton"/>
     </div>
   </form>
   </div>
