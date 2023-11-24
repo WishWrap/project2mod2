@@ -59,7 +59,9 @@ function ProductList() {
         title: "",
         price: 0,
         images: [""],
+      
       });
+      setEditProduct (null)
     } catch (error) {
       console.error("Error updating product:", error.message);
     }
